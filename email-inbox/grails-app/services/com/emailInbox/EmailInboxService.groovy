@@ -29,7 +29,7 @@ class EmailInboxService {
         if (GrailsUtil.developmentEnv) {
             path = ServletContextHolder.getServletContext().getRealPath("/")
         } else {
-            path = grailsApplication.config.grails.defaultDocumentPath
+            path = grailsApplication?.config?.grails.defaultDocumentPath
         }
         return path
     }
@@ -41,8 +41,8 @@ class EmailInboxService {
         try {
             Session session = Session.getInstance(props, null);
             Store store = session.getStore("imaps");
-            final String username = grailsApplication.config.grails.mail.username
-            final String password = grailsApplication.config.grails.mail.password
+            final String username = grailsApplication?.config?.grails?.mail?.username
+            final String password = grailsApplication?.config?.grails?.mail?.password
             store.connect("imap.gmail.com", 993, username, password);
             Folder inbox = store.getFolder("INBOX");
             inbox.open(Folder.READ_ONLY);
