@@ -40,6 +40,12 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
+
+        compile ":mail:1.0", {
+            excludes 'spring-test'
+        }
+        compile ":quartz:1.0.1"
+
         build(":release:3.0.1",
               ":rest-client-builder:1.0.3") {
             export = false
