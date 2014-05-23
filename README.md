@@ -1,4 +1,7 @@
-Grails-Email-Inbox
-==================
+Grails-Social-Login
+===================
 
-Grails plugin to manage incoming/outgoing emails in the form of Inbox within the application
+Generic code for Social Media Login for any grails application.
+
+Good application to start your grails project with Social Media login(Facebook, LinkedIn, Google, Twitter) already implmented with domain structure and Spring security. Also twitter bootstrap is installed by default to provide a better UI.
+
